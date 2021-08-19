@@ -246,7 +246,7 @@ module.exports = {
   Car,
   Lambdasian,
   Instructor,
-  Student,
+  Student,git,
   ProjectManager
 }
 
