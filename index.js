@@ -118,7 +118,7 @@ class Lambdasian {
     this.location = atters.location;
   }
   speak(){
-    return `Hell my name is ${this.name}, I an from ${this.location}.`
+    return `Hello my name is ${this.name}, I an from ${this.location}.`
   }
 };
 
@@ -136,8 +136,26 @@ class Lambdasian {
         + `demo` receives a `subject` string as an argument and returns the phrase 'Today we are learning about {subject}' where subject is the param passed in.
         + `grade` receives a `student` object and a `subject` string as arguments and returns '{student.name} receives a perfect score on {subject}'
 */
-class Instructor {
-
+class Instructor extends Lambdasian{
+  constructor(atters){
+  super(atters)
+    this.specialty   = atters.specialty;
+    this.favLanguage = atters.favLanguage;
+    this.catchPhrase = atters.catchPhrase;
+  }
+demo(subject){
+  return `Today we are learning about ${subject}`;
+}  
+grade(student, subject){
+  return `${student.name} receives a perfect score on ${subject}`;
+}
+gradeUpdate(){
+  if ( Math.round(Math.random()) === 1){
+    Student.grade += 10;
+  } else {
+    Student.grade -= 20;
+  }
+}
 }
 /*
   TASK 5
